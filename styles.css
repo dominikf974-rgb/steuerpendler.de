@@ -1,0 +1,578 @@
+/* ========================================
+   STEUERPENDLER – Global Styles
+   Dark/Blue Theme, Modern Fintech Design
+   ======================================== */
+
+:root {
+  --primary: #1e3a8a;
+  --primary-dark: #1e40af;
+  --primary-light: #3b82f6;
+  --accent: #10b981;
+  --accent-light: #34d399;
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --border: #334155;
+  --error: #ef4444;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 1.875rem;
+  color: #f1f5f9;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: #f1f5f9;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--primary-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+ul, ol {
+  margin: 1rem 0 1rem 1.5rem;
+  color: var(--text-secondary);
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+code {
+  background: var(--bg-card);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: var(--accent-light);
+}
+
+/* ========================================
+   LAYOUT
+   ======================================== */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+/* ========================================
+   HEADER & NAVIGATION
+   ======================================== */
+
+header {
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo::before {
+  content: '📊';
+  font-size: 1.8rem;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+nav a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent-light);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: var(--primary-light);
+  border: 2px solid var(--primary-light);
+  box-shadow: none;
+  padding: 0.5rem 1rem;
+}
+
+.cta-button.secondary:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero .cta-button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+}
+
+/* ========================================
+   CARDS & CONTENT
+   ======================================== */
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--primary-light);
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  color: var(--accent-light);
+  margin-top: 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* ========================================
+   FAQ SECTION
+   ======================================== */
+
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+.faq-item summary {
+  background: var(--bg-card);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.faq-item summary:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: var(--primary-light);
+}
+
+.faq-item summary::after {
+  content: '▼';
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.faq-item details p {
+  padding: 1rem;
+  background: rgba(30, 41, 59, 0.5);
+  margin: 0;
+  border-radius: 0 0 6px 6px;
+}
+
+/* ========================================
+   CHECKLIST
+   ======================================== */
+
+.checklist {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.checklist h4 {
+  color: var(--accent-light);
+  margin-top: 0;
+}
+
+.checklist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checklist li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0;
+}
+
+.checklist li::before {
+  content: '✓';
+  color: var(--success);
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   CTA BLOCK
+   ======================================== */
+
+.cta-block {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.cta-block h2 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.cta-block p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+  background: rgba(15, 23, 42, 0.95);
+  border-top: 1px solid var(--border);
+  padding: 2rem 1.5rem;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer-section h4 {
+  color: var(--accent-light);
+  margin-bottom: 1rem;
+}
+
+.footer-section a {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.footer-section a:hover {
+  color: var(--accent-light);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.highlight {
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 4px solid var(--accent);
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+}
+
+.highlight strong {
+  color: var(--accent-light);
+}
+
+.example-box {
+  background: rgba(59, 130, 246, 0.05);
+  border: 1px dashed var(--primary-light);
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+.breadcrumb {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.breadcrumb a {
+  margin: 0 0.25rem;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  .header-content {
+    padding: 1rem;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .cta-button {
+    width: 100%;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 2px;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
