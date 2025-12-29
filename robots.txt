@@ -1,0 +1,13 @@
+# SteuerPendler - robots.txt
+# Dateipfade sind relativ zum Root
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://DOMAIN.TLD/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
