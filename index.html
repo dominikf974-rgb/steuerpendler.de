@@ -19,8 +19,31 @@
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='50' font-size='50' dominant-baseline='middle' text-anchor='middle' x='50'%3E%F0%9F%93%8A%3C/text%3E%3C/svg%3E" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Falls du styles.css nicht mehr brauchst, kannst du die Zeile entfernen -->
+  <!-- <link rel="stylesheet" href="styles.css" /> -->
   <script defer src="main.js"></script>
+
+  <!-- ✅ NUR BREITE-FIX: Farben bleiben wie sie sind -->
+  <style>
+    /* Wichtig: sorgt dafür, dass Padding nicht die Breite sprengt */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    /* Desktop-Breite Fix:
+       - nutzt mehr Breite am PC
+       - bleibt auf Mobile angenehm
+       - 1400px ist ein moderner “Content Width” Standard
+    */
+    .container{
+      width: 100%;
+      max-width: min(1400px, 94vw);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    @media (max-width: 600px){
+      .container{ padding: 16px; }
+    }
+  </style>
 
   <!-- FAQ Schema (für Google Rich Results) -->
   <script type="application/ld+json">
@@ -108,7 +131,6 @@
         <div class="hero-buttons">
           <a href="ratgeber.html" class="cta-button">Zum Ratgeber</a>
 
-          <!-- Empfehlung: langfristig auf interne Tool-URL umstellen -->
           <a href="https://spritkosten-check.de/" target="_blank" rel="noopener noreferrer" class="cta-button secondary" data-cta="spritkosten">
             Spritkosten berechnen
           </a>
