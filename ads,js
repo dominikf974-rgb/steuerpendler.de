@@ -1,0 +1,160 @@
+/* ========================================
+   STEUERPENDLER – Google Ads Integration
+   Zentrale Verwaltung für alle Ad-Positionen
+   ======================================== */
+
+/**
+ * Ad-Konfiguration
+ * Ersetze 'ca-pub-XXXXXXXXXXXXXXXX' mit deiner echten AdSense Publisher ID
+ * Ersetze die Slot-IDs mit deinen echten Ad-Unit-IDs
+ */
+const AD_CONFIG = {
+  publisherId: 'ca-pub-4852698472752437', // Deine Publisher ID
+  slots: {
+    top: '6715771878',    // Top Ad Slot ID
+    middle: '9538404000', // Middle Ad Slot ID
+    bottom: '6912240660'  // Bottom Ad Slot ID
+  },
+  // Testmodus: true = zeigt Platzhalter statt echte Ads
+  testMode: true
+};
+
+/**
+ * TOP AD – Nach Intro-Section
+ * Format: Horizontal Banner (728x90 oder responsive)
+ */
+function renderTopAd() {
+  const container = document.getElementById('ad-top');
+  if (!container) return;
+
+  if (AD_CONFIG.testMode) {
+    // Platzhalter für Entwicklung
+    container.innerHTML = `
+      <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+                  border: 2px dashed #ffffff; 
+                  border-radius: 8px; 
+                  padding: 2rem; 
+                  text-align: center; 
+                  color: white;
+                  margin: 2rem 0;">
+        <strong>📢 Top Ad Position</strong><br>
+        <small>728x90 oder Responsive Banner</small><br>
+        <small style="opacity: 0.8;">Ersetze testMode mit echtem AdSense Code</small>
+      </div>
+    `;
+  } else {
+    // Echter Google AdSense Code
+    container.innerHTML = `
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="${AD_CONFIG.publisherId}"
+           data-ad-slot="${AD_CONFIG.slots.top}"
+           data-ad-format="horizontal"
+           data-full-width-responsive="true"></ins>
+    `;
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  }
+}
+
+/**
+ * MIDDLE AD – Nach Hauptinhalt
+ * Format: Rectangle (300x250) oder responsive
+ */
+function renderMiddleAd() {
+  const container = document.getElementById('ad-middle');
+  if (!container) return;
+
+  if (AD_CONFIG.testMode) {
+    // Platzhalter für Entwicklung
+    container.innerHTML = `
+      <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); 
+                  border: 2px dashed #ffffff; 
+                  border-radius: 8px; 
+                  padding: 2rem; 
+                  text-align: center; 
+                  color: white;
+                  margin: 2rem 0;">
+        <strong>📢 Middle Ad Position</strong><br>
+        <small>300x250 Rectangle oder Responsive</small><br>
+        <small style="opacity: 0.8;">Ideal nach Hauptinhalt</small>
+      </div>
+    `;
+  } else {
+    // Echter Google AdSense Code
+    container.innerHTML = `
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="${AD_CONFIG.publisherId}"
+           data-ad-slot="${AD_CONFIG.slots.middle}"
+           data-ad-format="rectangle"
+           data-full-width-responsive="true"></ins>
+    `;
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  }
+}
+
+/**
+ * BOTTOM AD – Vor Footer / vor CTA
+ * Format: Horizontal Banner (728x90 oder responsive)
+ */
+function renderBottomAd() {
+  const container = document.getElementById('ad-bottom');
+  if (!container) return;
+
+  if (AD_CONFIG.testMode) {
+    // Platzhalter für Entwicklung
+    container.innerHTML = `
+      <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); 
+                  border: 2px dashed #ffffff; 
+                  border-radius: 8px; 
+                  padding: 2rem; 
+                  text-align: center; 
+                  color: white;
+                  margin: 2rem 0;">
+        <strong>📢 Bottom Ad Position</strong><br>
+        <small>728x90 oder Responsive Banner</small><br>
+        <small style="opacity: 0.8;">Letzte Chance vor CTA</small>
+      </div>
+    `;
+  } else {
+    // Echter Google AdSense Code
+    container.innerHTML = `
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="${AD_CONFIG.publisherId}"
+           data-ad-slot="${AD_CONFIG.slots.bottom}"
+           data-ad-format="horizontal"
+           data-full-width-responsive="true"></ins>
+    `;
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  }
+}
+
+/**
+ * Initialisierung – lädt alle Ads
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  renderTopAd();
+  renderMiddleAd();
+  renderBottomAd();
+});
+
+/**
+ * ANLEITUNG:
+ * 
+ * 1. Füge in jede HTML-Seite ein:
+ *    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+ *    <script src="ads.js"></script>
+ * 
+ * 2. Platziere diese Divs an gewünschten Positionen:
+ *    <div id="ad-top"></div>     <!-- Nach Intro -->
+ *    <div id="ad-middle"></div>  <!-- Nach Hauptinhalt -->
+ *    <div id="ad-bottom"></div>  <!-- Vor Footer/CTA -->
+ * 
+ * 3. Ersetze in dieser Datei:
+ *    - publisherId mit deiner echten AdSense ID
+ *    - slots.top/middle/bottom mit echten Ad-Unit-IDs
+ *    - testMode auf false setzen
+ * 
+ * 4. WICHTIG: Nicht zu viele Ads! 3 pro Seite = optimal für Conversions
+ */
