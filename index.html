@@ -1,30 +1,91 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SteuerPendler – Ihr Ratgeber für Pendlerpauschale, Fahrtkosten und Steuerersparnis. Wir zeigen Ihnen, wie Sie als Pendler richtig sparen.">
-  <meta name="keywords" content="Pendlerpauschale, Fahrtkosten, Kilometerpauschale, Steuererklärung, Pendler, Steuerberatung">
-  <meta name="author" content="SteuerPendler">
-  <meta property="og:title" content="SteuerPendler – Ratgeber für Pendlerpauschale & Fahrtkosten">
-  <meta property="og:description" content="Entdecken Sie wie viel Sie als Pendler sparen können. Umfassender Guide zur Pendlerpauschale und Fahrtkosten-Abzug.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://DOMAIN.TLD/">
-  <meta property="og:image" content="https://DOMAIN.TLD/og-image.png">
-  <link rel="canonical" href="https://DOMAIN.TLD/">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='50' font-size='50' dominant-baseline='middle' text-anchor='middle' x='50'%3E📊%3C/text%3E%3C/svg%3E">
-  <title>SteuerPendler – Pendlerpauschale & Fahrtkosten Guide</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Pendlerpauschale & Fahrtkosten: Tipps, Beispiele & Rechner | SteuerPendler</title>
+
+  <meta name="description" content="Pendlerpauschale und Fahrtkosten verstehen: Beispiele, FAQ und Tools. So holst du als Pendler mehr aus der Steuererklärung heraus." />
+  <meta name="author" content="SteuerPendler" />
+
+  <link rel="canonical" href="https://steuerpendler.de/" />
+
+  <meta property="og:title" content="SteuerPendler – Pendlerpauschale & Fahrtkosten einfach erklärt" />
+  <meta property="og:description" content="Tipps, Beispiele, FAQ & Tools rund um Pendlerpauschale und Fahrtkosten – verständlich und praxisnah." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://steuerpendler.de/" />
+  <meta property="og:image" content="https://steuerpendler.de/og-image.png" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='50' font-size='50' dominant-baseline='middle' text-anchor='middle' x='50'%3E%F0%9F%93%8A%3C/text%3E%3C/svg%3E" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="main.js"></script>
+
+  <!-- FAQ Schema (für Google Rich Results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie hoch ist die Pendlerpauschale?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Entfernungspauschale beträgt grundsätzlich 0,30 Euro pro Kilometer der einfachen Strecke. Ab einer höheren Entfernung gelten häufig erhöhte Sätze – maßgeblich ist die jeweils aktuelle Rechtslage. Wichtig: Es zählt nur die einfache Entfernung, nicht Hin- und Rückweg."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich Fahrtkosten zusätzlich zur Pendlerpauschale absetzen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Für den Arbeitsweg gilt in der Regel die Entfernungspauschale. Zusätzliche tatsächliche Kosten sind meist nur in besonderen Konstellationen relevant (z. B. Dienstreisen, doppelte Haushaltsführung oder bei Selbstständigen je nach Fall)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wann lohnt sich eine Berechnung der tatsächlichen Kosten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eine Kostenrechnung lohnt sich, wenn du neben Sprit auch weitere große Fahrzeugkosten trägst oder besondere steuerliche Konstellationen hast. Für den normalen Arbeitsweg bleibt die Entfernungspauschale häufig der Standard – trotzdem kann ein Vergleich sinnvoll sein."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie wirken sich Homeoffice-Tage aus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wenn du an einem Tag nicht zur Arbeitsstätte fährst, fällt für diesen Tag keine Entfernungspauschale an. Je nach Regelung kann stattdessen die Homeoffice-Pauschale greifen. Entscheidend ist, was du tatsächlich gemacht hast und wie du es nachweist."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Können Selbstständige/Freiberufler Fahrtkosten absetzen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Bei Selbstständigen sind Fahrtkosten häufig Betriebsausgaben, abhängig davon, ob es sich um Betriebsstätte, Kundenfahrten oder wechselnde Einsatzorte handelt. Die genaue Einordnung hängt vom Einzelfall ab."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
   <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 
-  <header>
+  <header class="site-header">
     <div class="header-content">
       <a href="index.html" class="logo" title="Zur Startseite">SteuerPendler</a>
-      <button class="nav-toggle" aria-label="Navigation öffnen/schließen" aria-expanded="false">☰</button>
-      <nav role="navigation" aria-label="Hauptnavigation">
-        <a href="index.html">Startseite</a>
+
+      <button class="nav-toggle" aria-label="Navigation öffnen/schließen" aria-expanded="false" aria-controls="main-nav">
+        ☰
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
+        <a href="index.html" aria-current="page">Startseite</a>
         <a href="ratgeber.html">Ratgeber</a>
         <a href="pendlerpauschale.html">Pendlerpauschale</a>
         <a href="fahrtkosten-steuer.html">Fahrtkosten</a>
@@ -35,124 +96,148 @@
   </header>
 
   <main id="main-content">
-    <!-- HERO SECTION -->
+
+    <!-- HERO -->
     <section class="hero">
       <div class="container">
-        <h1>Maximiere deine Steuerersparnis als Pendler</h1>
-        <p>Entdecke, wie du als Pendler hunderte Euro pro Jahr sparen kannst. Wir zeigen dir die besten Strategien für Pendlerpauschale, Fahrtkosten und Steuern.</p>
+        <h1>Pendlerpauschale & Fahrtkosten: so holst du mehr aus der Steuer heraus</h1>
+        <p class="lead">
+          Verständliche Infos, Beispiele und Tools rund um den Arbeitsweg: Entfernungspauschale, Fahrtkosten und praktische Spartipps.
+        </p>
+
         <div class="hero-buttons">
           <a href="ratgeber.html" class="cta-button">Zum Ratgeber</a>
-          <a href="https://spritkosten-check.de/" target="_blank" rel="noopener noreferrer" class="cta-button secondary">Spritkosten berechnen</a>
+
+          <!-- Empfehlung: langfristig auf interne Tool-URL umstellen -->
+          <a href="https://spritkosten-check.de/" target="_blank" rel="noopener noreferrer" class="cta-button secondary" data-cta="spritkosten">
+            Spritkosten berechnen
+          </a>
         </div>
+
+        <p class="hero-note">
+          Hinweis: Inhalte dienen der Information und ersetzen keine individuelle Steuerberatung.
+        </p>
       </div>
     </section>
 
-    <!-- INTRO SECTION -->
+    <!-- QUICK LINKS -->
     <section class="section">
       <div class="container">
-        <h2>Willkommen bei SteuerPendler</h2>
-        <p>Als Pendler gibt es viele Möglichkeiten, Geld bei der Steuererklärung zu sparen. Ob Pendlerpauschale, Fahrtkosten-Abzug oder intelligente Pauschalen – wir zeigen dir alle legalen Wege, um deine Steuerlast zu senken.</p>
+        <h2>Was du hier findest</h2>
 
         <div class="cards-grid">
-          <div class="card">
+          <article class="card">
             <h3>💼 Pendlerpauschale</h3>
-            <p>Erfahre, wie die Pendlerpauschale funktioniert, wann du Anspruch hast und wie du sie in deiner Steuererklärung richtig geltend machst.</p>
-            <a href="pendlerpauschale.html" class="cta-button secondary" style="display: inline-block; margin-top: 0.5rem;">Mehr erfahren</a>
-          </div>
+            <p>Anspruch, Berechnung, Beispiele und typische Fehler – damit du korrekt einträgst und nichts verschenkst.</p>
+            <a href="pendlerpauschale.html" class="cta-button secondary">Mehr erfahren</a>
+          </article>
 
-          <div class="card">
-            <h3>🚗 Fahrtkosten absetzen</h3>
-            <p>Fahr- und Tankkosten gehören zu den größten Ausgaben. Lerne, wie du sie optimal in deiner Steuererklärung berücksichtigst.</p>
-            <a href="fahrtkosten-steuer.html" class="cta-button secondary" style="display: inline-block; margin-top: 0.5rem;">Mehr erfahren</a>
-          </div>
+          <article class="card">
+            <h3>🚗 Fahrtkosten</h3>
+            <p>Wann der Arbeitsweg pauschal läuft, wann Sonderfälle gelten und welche Nachweise wichtig sind.</p>
+            <a href="fahrtkosten-steuer.html" class="cta-button secondary">Mehr erfahren</a>
+          </article>
 
-          <div class="card">
+          <article class="card">
             <h3>📏 Kilometerpauschale</h3>
-            <p>Was ist der Unterschied zwischen Kilometerpauschale und Pendlerpauschale? Und wann lohnt sich welche Variante?</p>
-            <a href="kilometerpauschale.html" class="cta-button secondary" style="display: inline-block; margin-top: 0.5rem;">Mehr erfahren</a>
-          </div>
+            <p>Begriffe sauber verstehen: Arbeitsweg vs. Dienstfahrt – und welche Pauschalen in welcher Situation vorkommen.</p>
+            <a href="kilometerpauschale.html" class="cta-button secondary">Mehr erfahren</a>
+          </article>
 
-          <div class="card">
+          <article class="card">
             <h3>💡 Smarte Tipps</h3>
-            <p>Zusätzliche Strategien und praktische Tipps, um als Pendler das Maximum herauszuholen.</p>
-            <a href="ratgeber.html" class="cta-button secondary" style="display: inline-block; margin-top: 0.5rem;">Zum Ratgeber</a>
-          </div>
+            <p>Checklisten, Spartipps und praktische Rechenbeispiele für typische Pendler-Szenarien.</p>
+            <a href="ratgeber.html" class="cta-button secondary">Zum Ratgeber</a>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- FAQ SECTION -->
-    <section class="section" style="background: var(--bg-card); padding: 3rem 1.5rem;">
+    <!-- FAQ -->
+    <section class="section section-alt">
       <div class="container">
-        <h2>Häufig gestellte Fragen</h2>
+        <h2>Häufige Fragen</h2>
 
         <details class="faq-item">
-          <summary>Wie hoch ist die Pendlerpauschale 2024?</summary>
-          <p>Die Pendlerpauschale 2024 beträgt 0,30 Euro pro Kilometer für die einfache Fahrtentfernung. Das bedeutet: Bei 50 km Entfernung × 220 Arbeitstage × 0,30 Euro = 3.300 Euro Jahresabzug.</p>
+          <summary>Wie hoch ist die Pendlerpauschale?</summary>
+          <p>
+            Grundsätzlich gilt: 0,30 € pro Kilometer der <strong>einfachen</strong> Strecke. Ab bestimmten Entfernungen können erhöhte Sätze gelten – wichtig ist die jeweils aktuelle Regelung.
+          </p>
         </details>
 
         <details class="faq-item">
           <summary>Kann ich Fahrtkosten zusätzlich zur Pendlerpauschale absetzen?</summary>
-          <p>Nein, du musst dich für eine Variante entscheiden: Entweder die pauschale Methode (Pendlerpauschale) oder die tatsächlichen Fahrtkosten (Betriebsausgaben). Die vorteilhaftere Variante sollte in deiner Steuererklärung verwendet werden.</p>
+          <p>
+            Für den normalen Arbeitsweg gilt meist die Entfernungspauschale. Zusätzliche tatsächliche Kosten spielen häufig nur in Sonderfällen eine Rolle (z. B. Dienstreisen oder besondere berufliche Konstellationen).
+          </p>
         </details>
 
         <details class="faq-item">
-          <summary>Wann lohnt sich die Kilometerpauschale mehr?</summary>
-          <p>Die Kilometerpauschale lohnt sich, wenn deine tatsächlichen Kosten (Sprit, Wartung, etc.) über der Pendlerpauschale liegen. Das ist oft bei hohen Spritpreisen oder Elektrofahrzeugen mit niedrigen Ladekosten unterschiedlich.</p>
+          <summary>Wann lohnt sich eine Berechnung der tatsächlichen Kosten?</summary>
+          <p>
+            Wenn du einen realistischen Kostenvergleich machen willst (Sprit, Wartung etc.) oder Sonderfälle hast. Für viele Arbeitnehmer bleibt die Entfernungspauschale der Standard – ein Vergleich kann trotzdem hilfreich sein.
+          </p>
         </details>
 
         <details class="faq-item">
-          <summary>Kann ich das Homeoffice bei der Pendlerpauschale berücksichtigen?</summary>
-          <p>Ja! Wenn du z.B. 2 Tage pro Woche von zuhause arbeitest, reduziert sich die Anzahl der Arbeitstage. Statt 220 Tagen rechnest du nur 200 Tage (220 - 20). Das spart zwar ein wenig, ist aber realistisch.</p>
+          <summary>Wie wirken sich Homeoffice-Tage aus?</summary>
+          <p>
+            Fährst du an einem Tag nicht zur Arbeitsstätte, gibt es für diesen Tag keine Entfernungspauschale. Je nach Regel kann stattdessen die Homeoffice-Pauschale greifen.
+          </p>
         </details>
 
         <details class="faq-item">
-          <summary>Kann ich als Freiberufler die Pendlerpauschale nutzen?</summary>
-          <p>Ja, auch Freiberufler und Selbstständige können die Pendlerpauschale nutzen, wenn sie regelmäßig zu einem Ort (z.B. Büro) fahren. Bei variablen Einsatzorten ist es komplizierter.</p>
+          <summary>Können Selbstständige/Freiberufler Fahrtkosten absetzen?</summary>
+          <p>
+            Ja. Je nach Fall sind es Betriebsausgaben (z. B. Kundenfahrten). Die Einordnung hängt davon ab, wohin du fährst und wie deine Tätigkeit organisiert ist.
+          </p>
         </details>
       </div>
     </section>
 
-    <!-- CTA BLOCK -->
+    <!-- CTA -->
     <section class="cta-block">
       <div class="container">
-        <h2>Berechne deine Steuerersparnis</h2>
-        <p>Nutze unseren kostenlosen Spritkosten-Rechner, um genau zu sehen, wie viel du als Pendler sparen kannst.</p>
-        <a href="https://spritkosten-check.de/" target="_blank" rel="noopener noreferrer" class="cta-button">Jetzt Spritkosten berechnen</a>
+        <h2>Rechne deine Pendelkosten grob durch</h2>
+        <p>Starte mit dem Spritkosten-Rechner und nutze danach unsere Guides, um die passenden Einträge für deine Situation zu finden.</p>
+        <a href="https://spritkosten-check.de/" target="_blank" rel="noopener noreferrer" class="cta-button" data-cta="spritkosten-bottom">
+          Jetzt Spritkosten berechnen
+        </a>
       </div>
     </section>
 
-    <!-- CONTENT SECTION WITH ADS -->
+    <!-- INFO -->
     <section class="section">
       <div class="container">
-        <h2>Was Sie auf SteuerPendler erwartet</h2>
-        <p>SteuerPendler ist dein kompletterRatgeber für alle Fragen rund um die Steuererklärung als Pendler. Hier findest du:</p>
-        
-        <ul>
-          <li><strong>Detaillierte Erklärungen</strong> zu Pendlerpauschale, Fahrtkosten und Kilometerpauschale</li>
-          <li><strong>Praktische Beispiele</strong> mit echten Zahlen zum Nachrechnen</li>
-          <li><strong>Rechtssichere Informationen</strong> basierend auf aktuellem Steuerrecht</li>
-          <li><strong>Vergleiche</strong> zwischen verschiedenen Absatzmöglichkeiten</li>
-          <li><strong>Tools und Rechner</strong> zur Berechnung deiner Ersparnis</li>
+        <h2>Warum SteuerPendler?</h2>
+        <p>
+          SteuerPendler ist ein Ratgeber rund um Arbeitsweg, Pauschalen und typische Pendler-Fragen. Du bekommst:
+        </p>
+
+        <ul class="checklist">
+          <li><strong>Klare Erklärungen</strong> zu Pendlerpauschale, Arbeitsweg und Sonderfällen</li>
+          <li><strong>Praxis-Beispiele</strong> mit Zahlen</li>
+          <li><strong>Tools & Rechner</strong> für schnelle Überschläge</li>
+          <li><strong>Hinweise zu Nachweisen</strong> und häufigen Fehlern</li>
         </ul>
 
         <div class="highlight">
-          <strong>Wichtig:</strong> SteuerPendler ersetzt keine professionelle Steuerberatung. Für individuelle Fragen empfehlen wir, einen Steuerberater zu konsultieren.
+          <strong>Hinweis:</strong> Inhalte dienen der Information und ersetzen keine individuelle Steuerberatung. Bei Unsicherheit: Steuerberater oder Lohnsteuerhilfeverein.
         </div>
 
-        <!-- Google AdSense or alternative ad space -->
-        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; text-align: center; margin: 2rem 0; color: var(--text-secondary);">
+        <div class="ad-slot" aria-label="Anzeige">
           <p>[Anzeigen-Platz]</p>
         </div>
       </div>
     </section>
+
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-section">
         <h4>Über SteuerPendler</h4>
-        <p>Wir helfen Pendlern, ihre Steuererklärung optimal zu gestalten und ihre Steuerersparnis zu maximieren.</p>
+        <p>Wir helfen Pendlern, ihre Steuer-Themen rund um den Arbeitsweg verständlich zu machen – mit Tipps, Beispielen und Tools.</p>
       </div>
 
       <div class="footer-section">
@@ -172,16 +257,19 @@
       </div>
 
       <div class="footer-section">
-        <h4>Weitere Tools</h4>
-        <a href="https://spritkosten-check.de/" target="_blank" rel="noopener noreferrer">Spritkosten Rechner</a>
+        <h4>Tools</h4>
+        <a href="https://spritkosten-check.de/" target="_blank" rel="noopener noreferrer">Spritkosten-Rechner</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2024 SteuerPendler. Alle Rechte vorbehalten. | Stand: Januar 2024</p>
+      <p>&copy; <span id="year"></span> SteuerPendler. Alle Rechte vorbehalten. | Stand: Dezember 2025</p>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script>
+    // nur für Footer-Jahr (ohne extra JS-Datei)
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
