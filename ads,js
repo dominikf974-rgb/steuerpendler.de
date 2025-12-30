@@ -16,7 +16,7 @@ const AD_CONFIG = {
     bottom: '6912240660'  // Bottom Ad Slot ID
   },
   // Testmodus: true = zeigt Platzhalter statt echte Ads
-  testMode: true
+  testMode: false
 };
 
 /**
