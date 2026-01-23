@@ -8,7 +8,7 @@
   --bg-2: #0f1930;
   --bg-card: rgba(255,255,255,0.06);
   --text: rgba(255,255,255,0.92);
-  --text-secondary: rgba(255,255,255,0.75);
+  --text-secondary: rgba(255,255,255,0.75);  
   --text-light: rgba(255,255,255,0.70);
 
   --border: rgba(255,255,255,0.14);
@@ -363,4 +363,23 @@ footer{
 @media (max-width: 520px){
   .cards-grid{ grid-template-columns: 1fr; }
   .cta-button{ width: 100%; }
+}
+/* Legal pages: Kontakt optisch dezent, aber vorhanden */
+.legal-block{
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+}
+
+.legal-contact{
+  margin-top: 0.8rem;
+  padding-top: 0.7rem;
+  border-top: 1px dashed rgba(255,255,255,0.18);
+  font-size: 0.92rem;           /* kleiner */
+  opacity: 0.88;                 /* dezent */
+}
+
+.muted{
+  color: rgba(255,255,255,0.70);
 }
